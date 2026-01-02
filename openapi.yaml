@@ -1,0 +1,10 @@
+openapi: 3.0.3
+
+info:
+  title: BPM Account API (Training)
+  version: "1.0.0"
+  description: Тренировочный OpenAPI для процессов BPM
+
+paths:
+  /accounts/open:
+    $ref: ./paths/account_open.yaml
