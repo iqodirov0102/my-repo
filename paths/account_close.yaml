@@ -1,0 +1,34 @@
+post:
+  tags:
+    - Account Closing
+  summary: Закрытие счёта
+  description: Процесс закрытия банковского счёта
+
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - accountId
+            - reason
+          properties:
+            accountId:
+              type: string
+              example: "ACC-001"
+            reason:
+              type: string
+              example: "Client request"
+
+  responses:
+    "200":
+      description: Счёт успешно закрыт
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                example: "CLOSED"

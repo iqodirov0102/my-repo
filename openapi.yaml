@@ -8,3 +8,5 @@ info:
 paths:
   /accounts/open:
     $ref: ./paths/account_open.yaml
+  /accounts/close:
+    $ref: ./paths/account_close.yaml
