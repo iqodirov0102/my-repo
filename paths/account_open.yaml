@@ -1,0 +1,32 @@
+post:
+  tags: [Account Opening]
+  summary: Открытие счёта
+  description: Процесс открытия банковского счёта
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required: [customerId, productCode]
+          properties:
+            customerId:
+              type: string
+              example: "123456"
+            productCode:
+              type: string
+              example: "SAVINGS"
+  responses:
+    "200":
+      description: Успешно
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              accountId:
+                type: string
+                example: "ACC-001"
+              status:
+                type: string
+                example: "OPENED"
